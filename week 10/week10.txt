@@ -1,0 +1,91 @@
+1.def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        
+        swapped = False
+        
+        for j in range(0, n-i-1):
+            
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+
+        if not swapped:
+            break
+    return arr
+num_elements = int(input())
+elements = list(map(int, input().split()))
+
+
+if len(elements) != num_elements:
+    print("Number of elements provided does not match the expected count.")
+else:
+    
+    sorted_elements = bubble_sort(elements)
+    
+    print(" ".join(map(str, sorted_elements)))
+
+
+
+2.l=list(map(int, input().split()))
+freq = {}
+for num in l:
+    if num in freq:
+        freq[num] += 1
+    else:
+        freq[num] = 1
+sorted_freq = dict(sorted(freq.items()))
+for key, value in sorted_freq.items():
+    print(f"{key} {value}")
+
+
+3.def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            return True
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return False
+
+# Example usage:
+arr1 = [1, 2, 3, 5, 8]
+target1 = 6
+print(binary_search(arr1, target1)) 
+
+arr2 = [3, 5, 9, 45, 42]
+target2 = 42
+print(binary_search(arr2, target2))
+
+
+
+4.n=int(input())
+l=list(map(int,input().split()))
+l.sort()
+print(*l)
+    
+
+5.n=int(input())
+nums = list(map(int, input().split()))
+p = []
+for i in range(len(nums)):
+    if i == 0:
+        if nums[i] >= nums[i+1]:
+            p.append(nums[i])
+    elif i== len(nums) - 1:
+        if nums[i] >= nums[i-1]:
+            p.append(nums[i])
+    else:
+        if nums[i] >= nums[i-1] and nums[i] >= nums[i+1]:
+            p.append(nums[i])
+print(' '.join(map(str, p)))
+    
+            
+            

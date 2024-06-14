@@ -1,0 +1,125 @@
+1.d={1:['A','E','I','L','N','O','R','S','T','U'],2:['D','G'],3:['B','C','M','P'],4:['F','H','V','W','Y'],5:['K'],8:['J','X'],10:['Q','Z']}
+b=input()
+count=0
+for i in range(len(b)):
+    b1=b[i]
+    for j in d:
+        if(b1 in d[j]):
+            count+=j
+            break
+print("%s is worth %d points."%(b,count))
+            
+
+
+2.l=[]
+n=int(input())
+for i in range(n):
+    b=input()
+    l.append(b)
+d1={}
+s=set()
+for i in l:
+    count=0
+    if(i not in s):
+        s.add(i)
+        for j in l:
+            if(i==j):
+                count+=1
+        d1[i]=count
+l1=list(d1.values())
+max1=0
+for i in l1:
+    if(i>max1):
+        max1=i
+for i in d1:
+    if(d1[i]==max1):
+        print(i)
+        break
+        
+
+
+3.l1=input().split(" ")
+l2=input().split(" ")
+l3=l1+l2
+d1={}
+s=set()
+for i in l3:
+    count=0
+    if(i not in s):
+        s.add(i)
+        for j in l3:
+            if(i==j):
+                count+=1
+        d1[i]=count
+for i in d1:
+    if(d1[i]==1):
+        print(i,end=" ")
+
+
+4.d={}
+n=int(input())
+for i in range (n):
+    b=input().split(" ")
+    l=[]
+    for j in range (1,len(b)):
+        l.append(int(b[j]))
+    d[b[0]]=l
+for i in d:
+    b=sum(d[i])
+    d[i]=b
+l=list(d.values())
+l.sort()
+for i in l:
+    for key in d:
+        if(d[key]==i):
+            print(key,i)
+
+5.d={}
+n=int(input())
+for i in range (n):
+    b=input().split(" ")
+    l=[]
+    for j in range (1,4):
+        l.append(int(b[j]))
+    d[b[0]]=l
+max1=0
+min1=101
+maxh=0
+minb=101
+for i in d:
+    b=sum(d[i])/4
+    if(b>max1):
+        max1=b
+        name1=i
+    if(b<min1):
+        min1=b
+        name2=i
+    if(maxh<d[i][1]):
+        maxh=d[i][1]
+        maxhn=i
+    if(minb>d[i][2]):
+        minb=d[i][2]
+        minbn=i
+d1={}
+l1,l2,l3,l4=[],[],[],[]
+for i in d:
+    b=sum(d[i])/4
+    if(max1==b):
+        l1.append(i)
+    if(maxh==d[i][1]):
+        l2.append(i)
+    if(minb==d[i][2]):
+        l3.append(i)
+    if(min1==b):
+        l4.append(i)
+d1[1]=sorted(l1)
+d1[2]=sorted(l2)
+d1[3]=sorted(l3)
+d1[4]=sorted(l4)
+for i in d1:
+    l=len(d1[i])
+    for j in range(l):
+        print(d1[i][j],end=" ")
+    print()
+            
+            

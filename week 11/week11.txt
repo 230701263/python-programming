@@ -1,0 +1,47 @@
+1.try:
+    a=float(input())
+    b=float(input())
+    if b==0:
+     print("Error: Cannot divide or modulo by zero.")
+    else:
+     c=a/b
+     print(c)
+except ValueError:
+    print("Error: Non-numeric input provided.")
+
+
+3.try:
+    a=int(input())
+    if 0<=a<=200:
+        print(f"You are {a} years old.")
+    else:
+        print("Error: Please enter a valid age.")
+except:
+    print("Error: Please enter a valid age.")
+
+
+4.try:
+    a=input()
+    if a=="":
+        print("Error: Please enter a valid age")
+    elif a.isdigit():
+        a=int(a)
+        if a>=0:
+         print(f"You are {a} years old.")
+    else:
+         print("Error: Please enter a valid age.")
+except EOFError:
+    print("Error: Please enter a valid age.")
+
+
+5.try:
+    a=int(input())
+    if 1<=a<=100:
+        print('Valid input.')
+    else:
+        print("Error: Number out of allowed range")
+except ValueError:
+    print("Error: invalid literal for int()")
+    
+            
+            

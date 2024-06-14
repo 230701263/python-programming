@@ -1,0 +1,95 @@
+1.def count_unique_pairs(n, activities, k):
+    unique_pairs = set()
+    for i in range(n):
+        for j in range(i+1, n):
+            if abs(activities[i] - activities[j]) == k:
+                unique_pairs.add((i, j))
+
+    return len(unique_pairs)
+def main():
+    n = int(input())
+    activities = list(map(int, input().split()))
+    k = int(input())
+    result = count_unique_pairs(n, activities, k)
+    print(result)
+main()
+
+
+2.import math
+def calculate_tiles():
+    values = input("").split()
+    pool_diameter = float(values[0])
+    tile_size = float(values[1])
+    pool_diameter_cm = pool_diameter * 100
+    pool_area = math.pi * (pool_diameter_cm / 2) ** 2
+    tile_area = tile_size ** 2
+    if int(pool_diameter) % 2 != 0:
+        num_tiles = math.ceil(pool_area / tile_area) + 100
+    else:
+        num_tiles = math.ceil(pool_area / tile_area)
+    print(num_tiles, "tiles")
+calculate_tiles()
+    
+
+
+3.import sys
+def categorize_books():
+    input_data = sys.stdin.read()
+    book_entries = input_data.strip().split('\n')
+    books_by_genre = {}
+    for entry in book_entries:
+        if not entry:
+            break
+        title, genre = map(str.strip, entry.split(',', 1))
+        if genre in books_by_genre:
+            books_by_genre[genre].append(title)
+        else:
+            books_by_genre[genre] = [title]
+    for genre, titles in books_by_genre.items():
+        print(f"{genre}: {', '.join(titles)}")
+categorize_books()
+
+
+
+4.def calculate_average_marks(data):
+    total_marks = 0
+    total_students = len(data)
+    
+    for student in data:
+        total_marks += int(student['MARKS'])
+    
+    average_marks = total_marks / total_students
+    return average_marks
+
+def main():
+    # Step 1: Parse input
+    n = int(input())
+    column_order = input().split()
+    data = []
+    
+    for _ in range(n):
+        student_info = input().split()
+        student_data = {}
+        for i in range(len(column_order)):
+            student_data[column_order[i]] = student_info[i]
+        data.append(student_data)
+    
+    # Step 2: Calculate average marks
+    average_marks = calculate_average_marks(data)
+    
+    # Step 3: Print result
+    print("{:.2f}".format(average_marks))
+
+if __name__ == "__main__":
+    main()
+
+
+5.def is_power_of_two(n):
+    return n > 0 and (n & (n - 1)) == 0
+def main():
+    n = int(input())
+    print(is_power_of_two(n))
+main()
+
+            
+            
