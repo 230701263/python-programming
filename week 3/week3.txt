@@ -1,0 +1,123 @@
+1.a=int(input())
+if -10 < a < 10:
+    print("-1")
+else:
+    a=abs(a)
+    x=(a//10)%10
+    print(x)
+
+
+2.a=int(input())
+b=int(input())
+c=a/2
+if(c<b):
+    print('IN')
+else:
+    print('OUT')
+
+3.x=input()
+if(x=='a' or x== 'e' or x=='i' or x=='o' or x=='u'):
+    print("It's a vowel.")
+elif x=='y':
+    print("Sometimes it's a vowel... Sometimes it's a consonant.")
+else:
+    print("It's a consonant.")
+
+
+4.m={"January": 31,"February": "28 or 29",
+"March": 31,"April": 30,"May": 31,"June": 30,
+"July": 31,"August": 31,"September": 30,"Octobor": 31,
+"November": 30,"December": 31}
+m1= input().capitalize()
+m2= m[m1]
+print(f"{m1} has {m2} days in it.")
+
+
+5.def pth(a,b,c):
+    n=sorted([a,b,c])
+    if n[0]**2 + n[1]**2 == n[2]**2:
+        return True
+    else:
+        return False
+a=int(input())
+b=int(input())
+c=int(input())
+
+if pth(a,b,c):
+    print("yes")
+else:
+    print("no")
+
+
+
+6.a=int(input())
+b=int(input())
+c=int(input())
+if(a==b==c):
+    print("That's a equilateral triangle")
+elif(a==b):
+    print("That's a isosceles triangle")
+else:
+    print("That's a scalene triangle")
+
+
+7.y=int(input())
+l=y%400==0 or (y%4==0 and y%100!=0)
+if(l):
+    print(y,"is a leap year.")
+else:
+    print(y,"is not a leap year.")
+
+
+8.u=float(input())
+
+
+if u<=199:
+    c=1.20
+elif u<400:
+    c=1.50
+elif u<600:
+    c=1.80
+else:
+    c=2.00
+    
+    
+    
+t=u*c
+
+
+if t>400:
+    s=0.15*t
+    t+=s
+    
+    
+    
+if t<100:
+    t=100
+    
+    
+print(format(t,".2f"))    
+    
+
+
+
+9.y=int(input())
+y1={0: "Monkey",1:"Rooster",2:"Dog",
+3:"Pig",4:"Rat",5:"Ox",6:"Tiger",
+7:"Hare",8:"Dragon",9:"Snake",10:"Horse",
+11:"Sheep"}
+z=(y-1200)%12
+y2=y1[z]
+print(y,"is the year of the",y2,end=".")
+
+
+10.a=int(input())
+b=int(input())
+c=int(input())
+total=a+b+c
+if (a>=65 and b>=55 and c>=50):
+    print('The candidate is eligible')
+elif(total>=180):
+    print("The candidate is eligible")
+else:
+    print("The candidate is not eligible")
