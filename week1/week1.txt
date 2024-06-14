@@ -1,0 +1,40 @@
+1.a=input()
+st=input()
+i=int(a)
+f=(float(st))
+r=round(f,1)
+print(i,type(i),sep=",")
+print(r,type(r),sep=",")
+
+
+2.BS=int(input())
+DA=(0.4*BS)
+HR=(0.2*BS)
+GS=(BS+DA+HR)
+print(int(GS))
+
+3.import math
+a=float(input(""))
+b=math.sqrt(a)
+print("{:.3f}".format(b))
+
+4.x=int(input())
+y=int(input())
+z=float(input())
+a=x+y
+b=z-a
+gain=(b/a)*100
+print("{:.2f} is the gain percent. ".format(gain))
+
+
+5.l=int(input())
+m=int(input())
+TR=(l*0.10+m*0.25)
+print("Your total refund will be ",format(TR,".2f"),sep="$",end=".")
+
+
+6.s=int(input())
+x=(s-500)/130
+absolute=abs(x)
+print("weekdays",format(10+absolute,".2f"))
+print("weekend",format(absolute,".2f"))

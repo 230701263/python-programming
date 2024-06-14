@@ -1,0 +1,68 @@
+1.n=int(input())
+n1=bin(n).count('1')
+print(n1)
+
+
+2.n=int(input())
+p1=int(input())
+p2=int(input())
+p3=int(input())
+p4=int(input())
+r1= p1%n==0
+r2= p2%n==0
+r3= p3%n==0
+r4= p4%n==0
+print(r1,r2,r3,r4)
+
+
+3.f=int(input())
+i=f*(5/100)
+t=f*(18/100)
+tot=f+i+t
+print("The tax is",format(i,".2f"),end='')
+print(" and the tip is",format(t,".2f"),end=",")
+print(" making the total",format(tot,".2f"))
+
+
+4.n=int(input())
+a1=ord('C')
+a2=ord('D')
+o=chr(a1+n)
+print(o)
+
+
+5.w=int(input())
+s=int(input())
+b=(w%3==0) and (s%2==0)
+print(b)
+
+6.a=int(input())
+w=int(input())
+e= a>= 18 and w>40
+print(e)
+
+
+7.n=int(input())
+a=abs(n)
+l=a%10
+print(l)
+
+
+8.giz1=75
+giz2=112
+tot1=int(input())*giz1
+tot2=int(input())*giz2
+t=tot1+tot2
+print("The total weight of all these widgets and gizmos is",t,"grams",end=".")
+
+
+9.n=int(input())
+a=n>=1 and n<=100 and n%2==0
+print(a)
+
+
+10.s=float(input())
+i=0.04
+for n in range(1,4):
+    b=s*(1+i)**n
+    print(f"Balance as of end of Year {n}: ${b:.2f}.")
